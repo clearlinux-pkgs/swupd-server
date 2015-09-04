@@ -1,0 +1,4 @@
+# This file contains pkgconfig build requirements that get picked up
+# but are undesirable. One entry per line, no whitespace.
+# FIXME: this is a parsing bug in autospec
+AC_CHECK_PROGS(XZ
