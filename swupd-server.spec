@@ -4,7 +4,7 @@
 #
 Name     : swupd-server
 Version  : 3.2.3
-Release  : 18
+Release  : 19
 URL      : https://github.com/clearlinux/swupd-server/releases/download/v3.2.3/swupd-server-3.2.3.tar.gz
 Source0  : https://github.com/clearlinux/swupd-server/releases/download/v3.2.3/swupd-server-3.2.3.tar.gz
 Summary  : No detailed summary available
@@ -39,10 +39,12 @@ bin components for the swupd-server package.
 %setup -q -n swupd-server-3.2.3
 
 %build
+export LANG=C
 %configure --disable-static --disable-tests
 make V=1  %{?_smp_mflags}
 
 %check
+export LANG=C
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost
