@@ -4,7 +4,7 @@
 #
 Name     : swupd-server
 Version  : 3.6.3
-Release  : 40
+Release  : 41
 URL      : https://github.com/clearlinux/swupd-server/releases/download/v3.6.3/swupd-server-3.6.3.tar.gz
 Source0  : https://github.com/clearlinux/swupd-server/releases/download/v3.6.3/swupd-server-3.6.3.tar.gz
 Summary  : No detailed summary available
@@ -43,8 +43,9 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1507236049
-%configure --disable-static --disable-tests
+export SOURCE_DATE_EPOCH=1508197445
+%configure --disable-static --disable-tests \
+--enable-rename-detection
 make V=1  %{?_smp_mflags}
 
 %check
@@ -55,7 +56,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1507236049
+export SOURCE_DATE_EPOCH=1508197445
 rm -rf %{buildroot}
 %make_install
 
