@@ -1,1 +1,0 @@
-watchurl=https://github.com/clearlinux/swupd-server/releases .*/swupd-server-(\d[\d.]*)\.tar\.gz
