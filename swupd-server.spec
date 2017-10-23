@@ -4,7 +4,7 @@
 #
 Name     : swupd-server
 Version  : 3.6.3
-Release  : 41
+Release  : 42
 URL      : https://github.com/clearlinux/swupd-server/releases/download/v3.6.3/swupd-server-3.6.3.tar.gz
 Source0  : https://github.com/clearlinux/swupd-server/releases/download/v3.6.3/swupd-server-3.6.3.tar.gz
 Summary  : No detailed summary available
