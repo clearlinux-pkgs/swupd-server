@@ -4,13 +4,14 @@
 #
 Name     : swupd-server
 Version  : 3.6.3
-Release  : 43
+Release  : 44
 URL      : https://github.com/clearlinux/swupd-server/releases/download/v3.6.3/swupd-server-3.6.3.tar.gz
 Source0  : https://github.com/clearlinux/swupd-server/releases/download/v3.6.3/swupd-server-3.6.3.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-2.0 GPL-2.0+
 Requires: swupd-server-bin
+Requires: rsync
 BuildRequires : bzip2-dev
 BuildRequires : pkgconfig(bsdiff)
 BuildRequires : pkgconfig(glib-2.0)
@@ -43,7 +44,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1509422556
+export SOURCE_DATE_EPOCH=1509992992
 %configure --disable-static --disable-tests \
 --enable-rename-detection
 make V=1  %{?_smp_mflags}
@@ -56,7 +57,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1509422556
+export SOURCE_DATE_EPOCH=1509992992
 rm -rf %{buildroot}
 %make_install
 
