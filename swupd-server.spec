@@ -6,7 +6,7 @@
 #
 Name     : swupd-server
 Version  : 3.7.5
-Release  : 53
+Release  : 54
 URL      : https://github.com/clearlinux/swupd-server/releases/download/v3.7.5/swupd-server-3.7.5.tar.gz
 Source0  : https://github.com/clearlinux/swupd-server/releases/download/v3.7.5/swupd-server-3.7.5.tar.gz
 Source99 : https://github.com/clearlinux/swupd-server/releases/download/v3.7.5/swupd-server-3.7.5.tar.gz.asc
